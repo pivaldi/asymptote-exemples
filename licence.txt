@@ -1,0 +1,9 @@
+All Asymptote files of this archive are under lisence LGPL (see the
+attached file lgpl.txt). Unless otherwise specified and *except the
+files in the directory "odoc /"*, Philippe Ivaldi <www.piprime.fr> is
+the author of these files.
+
+Tous les fichiers Asymptote de cette archive sont sous lisence LGPL
+(voir le fichier joint lgpl.txt).
+Sauf mention contraire, et *à l'exception des fichiers du répertoire
+"odoc/"*, Philippe Ivaldi est l'auteur de ces fichiers.

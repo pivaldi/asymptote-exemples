@@ -1,0 +1,11 @@
+|148|trembling|
+|103|Geometry|
+|118|conic|
+|126|parabola|
+|127|hyperbola|
+|64|Circle|
+|125|ellipse|
+|97|line|
+|121|point|
+|71|Point/Dot|
+|102|Intersection|
