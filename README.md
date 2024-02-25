@@ -6,8 +6,8 @@ for technical drawing.
 
 ## About this repo
 
-This repository contained extensive examples of Asymptote code and
-provides an "Howto" by example from basis to lunar :D.  
+This repository contains extensive examples of Asymptote code and
+provides an "Howto" by example from basic to advanced feature.  
 Some examples use personal modules that can be found [here](https://github.com/pivaldi/asymptote-packages).
 
 ## Visualizing the examples
