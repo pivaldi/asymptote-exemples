@@ -1,7 +1,7 @@
 include "./makecd.asy";
 import animate;
 // settings.tex="pdflatex";
-settings.keep=true;
+settings.keep = true;
 
 animation A;
 A.global=false;
@@ -15,17 +15,17 @@ real ptsz = 1;
 int loops = 6;
 pen border = black;
 
-real frames = length*fps;
+real frames = length * fps;
 picture tmp;
 
 size(pixsz);
-for (int i=100 ; i < 100+frames ; ++i) {
+for (int i = 100 ; i < 100+frames ; ++i) {
   save();
   add(CayleyDiagram(nodeLocs, arrows, orders, arrowPens,
-                    cam = (rad*cos(2*i*pi/frames),rad*sin(2*i*pi/frames),ht),
+                    cam = (rad * cos(2 * i * pi/frames), rad * sin(2 * i * pi/frames), ht),
                     arrowThickness = 2, nodeSize = 0.02,
                     arrowMargin = 1mm, depthCueing = true ));
-  draw(box((-ptsz/2,-ptsz/2), (ptsz/2,ptsz/2)), border);
+  draw(box((-ptsz/2, -ptsz/2), (ptsz/2, ptsz/2)), border);
   A.add();
   write( "Did " + (string)(i-99) + " out of " + (string)frames );
   restore();

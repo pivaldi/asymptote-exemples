@@ -1,6 +1,8 @@
 import three;
 // import solids;
 
+real picSize = 15cm;
+
 pen hsb ( real h, real s, real b )
 {
   if ( s == 0 ) {
@@ -23,7 +25,7 @@ pen hsb ( real h, real s, real b )
 
 pen hue ( real h ) { return hsb( h, 1.0, 0.85 ); }
 
-triple camera;
+triple theCamera;
 
 pen lighten ( pen p, real percent )
 {
@@ -38,31 +40,11 @@ pen lighten ( pen p, real percent )
   return rgb( c[0], c[1], c[2] );
 }
 
-picture overlay ( picture background, picture foreground, real transparency = 0.5,
-                  pair minpt = (0,0), pair maxpt = (0,0) )
-{
-  layer( background );
-  if ( minpt == maxpt ) {
-    minpt = min( background );
-    maxpt = max( background );
-  }
-  fill( background, box( minpt, maxpt ), white+opacity(1-transparency) );
-  add( background, foreground );
-  return background;
-}
-
-picture union ( picture one, picture two )
-{
-  layer( one );
-  add( one, two );
-  return one;
-}
-
-void render ( picture ontothis, picture[] objects, triple[] locations )
+void render( picture ontothis, picture[] objects, triple[] locations )
 {
   real[] distances = new real[];
   for ( int i = 0 ; i < locations.length ; ++i )
-    distances.push( length( locations[i]-camera ) );
+    distances.push( length( locations[i]-theCamera ) );
   real farthest = max( distances );
   int maxdistance = 100000;
   int[][] sorting = new int[][];
@@ -73,19 +55,19 @@ void render ( picture ontothis, picture[] objects, triple[] locations )
     add( ontothis, objects[sorting[i][1]] );
 }
 
-pen changepen ( pen orig, real thick, bool depth, triple camera, triple midpoint )
+pen changepen ( pen orig, real thick, bool depth, triple theCamera, triple midpoint )
 {
   pen result = orig;
   if ( depth ) {
-    real dist2line = length( camera - midpoint );
-    real dist2orig = length( camera );
+    real dist2line = length( theCamera - midpoint );
+    real dist2orig = length( theCamera );
     if ( dist2line > dist2orig )
       result = lighten( result, ( dist2line - dist2orig + 1 ) / 3 );
   }
   if ( thick != 0 ) {
     real mythick = thick;
     if ( depth )
-      mythick = mythick / ( length( camera - midpoint ) - length( camera ) + 2 );
+      mythick = mythick / ( length( theCamera - midpoint ) - length( theCamera ) + 2 );
     result = result + linewidth( mythick );
   }
   return result;
@@ -114,18 +96,19 @@ picture CayleyDiagram ( triple[] nodeLocs = null, string[] nodeNames = null,
                         triple cam = (0,0,0) )
 {
   if ( cam != (0,0,0) ) {
-    camera = cam;
-    currentprojection = perspective( camera );
+    theCamera = cam;
+    currentprojection = perspective( theCamera );
   }
   if ( alias( nodeLocs, null ) ) nodeLocs = new triple[]{ };
   if ( alias( arrows, null ) ) arrows = new triple[][]{ };
   if ( alias( orders, null ) ) orders = new int[]{ };
   if ( alias( arrowPens, null ) ) arrowPens = new pen[]{ };
   picture result = new picture;
+  size(result, picSize);
   //    face[] faces;
   picture[] torender = new picture[];
   triple[] locs = new triple[];
-  real dist2orig = length( camera );
+  real dist2orig = length( theCamera );
   for ( int i = 0 ; i < arrows.length ; ++i ) {
     guide3 g;
     triple[] a = arrows[i];
@@ -137,65 +120,77 @@ picture CayleyDiagram ( triple[] nodeLocs = null, string[] nodeNames = null,
       else
         p = a[0]+(0.001,0,0)--p;
     }
-    //        draw( pic = orderDepth ? faces.push( p ) : result, g = p,
-    //              p = P, margin = TrueMargin( arrowMargin, arrowMargin ),
-    //              arrow = ( orders[i] == 2 ) ? None : Arrow( arrowSize ) );
+
     if ( orderDepth ) {
       int slices = 1;
       //write( "arrow arc length: ", p.arclength() );
       if ( arrowSlicing > 0.0 ) slices = floor( arclength(p) / arrowSlicing );
       if ( slices == 0 ) slices = 1;
       for ( int j = 0 ; j < slices ; ++j ) {
-        pen P = changepen( arrowPens[i], arrowThickness, depthCueing, camera,
-                           p.point( length(p)*(j+0.5)/slices ) );
+        pen P = changepen( arrowPens[i], arrowThickness, depthCueing, theCamera,
+                           point(p, length(p)*(j+0.5)/slices ) );
         torender.push( new picture );
         path3 subp = subpath( p, length(p)*j*1.0/slices, length(p)*(j+1.0)/slices );
-        draw( torender[torender.length-1], g = subp, p = P,
-              margin = TrueMargin( ( j == 0 ) ? arrowMargin : 0,
-                                   ( j == slices - 1 ) ? arrowMargin : 0 ),
-              arrow = ( ( orders[i] == 2 ) || ( j < slices - 1 ) ) ?
-              None : Arrow( arrowSize ) );
+        // draw( torender[torender.length-1], g = subp, p = P,
+        //       margin = TrueMargin( ( j == 0 ) ? arrowMargin : 0,
+        //                            ( j == slices - 1 ) ? arrowMargin : 0 ),
+        //       arrow = ( ( orders[i] == 2 ) || ( j < slices - 1 ) ) ?
+        //       None : Arrow( arrowSize ) );
+        // TODO : add margin and arrows
+        size(torender[torender.length-1], picSize);
+        draw( torender[torender.length-1], g = subp, p = P);
+
         locs.push( point( p, length(p)*(j+0.5)/slices ) );
       }
     } else {
       // ignore arrowSlicing when depth not used; it has no effect
-      pen P = changepen( arrowPens[i], arrowThickness, depthCueing, camera,
-                         p.point( 0.5*length(p) ) );
-      draw( pic = result, g = p, p = P,
-            margin = TrueMargin( arrowMargin, arrowMargin ),
-            arrow = ( orders[i] == 2 ) ? None : Arrow( arrowSize ) );
+      pen P = changepen( arrowPens[i], arrowThickness, depthCueing, theCamera,
+                         point(p, 0.5*length(p) ) );
+      // draw( pic = result, g = p, p = P,
+      //       margin = TrueMargin( arrowMargin, arrowMargin ),
+      //       arrow = ( orders[i] == 2 ) ? None : Arrow( arrowSize ) );
+      // TODO : add margin and arrows
+      draw( pic = result, g = p, p = P);
     }
   }
-  real numerator = labelScaling * length( camera );
+  real numerator = labelScaling * length( theCamera );
   for ( int i = 0 ; i < nodeLocs.length ; ++i ) {
-    path3 p = circle( nodeLocs[i], nodeSize, camera - nodeLocs[i] );
+    path3 p = circle( nodeLocs[i], nodeSize, theCamera - nodeLocs[i] );
     pen tmpFP = fillPen;
     pen tmpDP = drawPen;
     if ( depthCueing ) {
-      real dist2node = length( camera - nodeLocs[i] );
+      real dist2node = length( theCamera - nodeLocs[i] );
       if ( dist2node > dist2orig - 1 ) {
         tmpDP = lighten( tmpDP, ( dist2node - dist2orig + 1 ) / 3 );
         tmpFP = lighten( tmpFP, ( dist2node - dist2orig + 1 ) / 3 );
       }
     }
-    //        filldraw( orderDepth ? faces.push( p ) : result, p, tmpFP, tmpDP );
+
     if ( orderDepth ) {
       torender.push( new picture );
-      filldraw( torender[torender.length-1], p, tmpFP, tmpDP );
+      // filldraw( torender[torender.length-1], p, tmpFP, tmpDP );
+      size(torender[torender.length-1], picSize);
+      draw( torender[torender.length-1], p, tmpDP );// TODO : fill !
+
       if ( !alias( nodeNames, null ) )
-        add( torender[torender.length-1], scale( numerator / length( nodeLocs[i] - camera ) )
+        add( torender[torender.length-1], scale( numerator / length( nodeLocs[i] - theCamera ) )
              * Label( nodeNames[i], nodeLocs[i] ) );
       locs.push( nodeLocs[i] );
-    } else { filldraw( result, p, tmpFP, tmpDP ); }
+    } else {
+      // filldraw( result, p, tmpFP, tmpDP );
+      draw(result, p, tmpDP);// TODO : fill !
+      draw(result, surface(p, new pen[] {tmpFP, tmpDP}));
+    }
   }
   if ( !orderDepth && !alias( nodeNames, null ) ) {
-    real numerator = labelScaling * length( camera );
+    real numerator = labelScaling * length( theCamera );
     for ( int i = 0 ; i < nodeNames.length ; ++i )
-      add( result, scale( numerator / length( nodeLocs[i] - camera ) )
+      add( result, scale( numerator / length( nodeLocs[i] - theCamera ) )
            * Label( nodeNames[i], nodeLocs[i] ) );
   }
-  //    if ( orderDepth ) add( result, faces );
+
   if ( orderDepth ) render( result, torender, locs );
+
   return result;
 }
 
