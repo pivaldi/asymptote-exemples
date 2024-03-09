@@ -1,9 +1,12 @@
 import solids;
 import palette;
 size(14cm,0);
-currentlight=light(gray(0.4),specularfactor=3,viewport=false,
-                   (-0.5,-0.25,0.45),
-                   (0.5,-0.5,0.5),(0.5,0.5,0.75));
+currentlight=light(
+  gray(0.4),
+  specularfactor=3,
+  (-0.5,-0.25,0.45),
+  (0.5,-0.5,0.5),(0.5,0.5,0.75)
+);
 
 nslice=4*nslice;
 surface s=surface(sphere(O,1));

@@ -1,7 +1,6 @@
 import solids;
 size(6cm,0);
-currentlight=light(diffuse=yellow, ambient=blue, specular=paleyellow,
-                   specularfactor=0, viewport=false,(5,-5,10));
+currentlight=light(diffuse=yellow, specular=blue, specularfactor=5, (5,-5,10));
 // currentprojection=orthographic(100,100,30);
 real r=2;
 

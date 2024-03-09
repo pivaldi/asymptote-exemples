@@ -14,7 +14,7 @@ draw(surface(rC),blue+opacity(0.5));
 
 skeleton s;
 real tOprime=abs(Oprime)/h;
-rC.transverse(s,reltime(rC.g,tOprime));
+rC.transverse(s,reltime(rC.g,tOprime), currentprojection);
 triple pAprime=relpoint(pA--pS,tOprime);
 draw(s.transverse.back,dashed);
 draw(s.transverse.front);

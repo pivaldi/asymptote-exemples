@@ -1,3 +1,0 @@
-Asymptote
-Examples 2D
-trembling.asy

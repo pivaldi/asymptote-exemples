@@ -60,6 +60,7 @@ eval(quote{
          --(903,327)..controls (925,327) and (939.332,351.332)..(946,400)
          ..controls (936.664,438) and (917.332,457)..(888,457)
          --cycle);
+    shipout();
   });
 
 eval(quote{
@@ -120,6 +121,7 @@ eval(quote{
          --cycle^^(1266,563)--(1239,509)..controls (1253.67,464.332) and (1280.67,442)..(1320,442)
          --(1347,483)--(1347,496)..controls (1332.33,532) and (1305.33,554.332)..(1266,563)
          --cycle);
+    shipout();
   });
 
 eval(quote{
@@ -179,6 +181,7 @@ eval(quote{
          --cycle^^(1171,694)..controls (1171,636) and (1199.67,607)..(1257,607)
          --(1286,607)--(1286,621)..controls (1286,673) and (1267,707)..(1229,723)
          --(1200,723)--cycle);
+    shipout();
   });
 
 eval(quote{
@@ -299,12 +302,15 @@ eval(quote{
          --cycle^^(70,807)--(70,793)--(167,723)
          --(167,737)..controls (161.664,759) and (129.332,782.332)..(70,807)
          --cycle);
+    shipout();
   });
 
 for (int n=1; n < 11; ++n) {
   picture pic;
   label(pic,graphic("main"+(string)(n < 6 ? n : 5)+".eps"),(n < 6 ? -3.5cm : 0,0));
+
   if(n > 5)
     label(pic, reflect(N,S)*graphic("main"+(string)(n-5)+".eps"), (1cm,0));
+
   add(pic, (4*(n%6),-2*floor(n/6))*1cm);
 }

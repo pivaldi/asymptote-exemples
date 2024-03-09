@@ -54,7 +54,7 @@ pic.add(currentpicture);// Save the common picture.
 // Starting picture 1
 pair yM=(u,Y*u), ym=(u,-Y*u);
 draw(ym--yM, linewidth(bp), Arrow(TeXHead));
-arrow("\underline{Axe des réels}",(u,-0.75*Y*u),W,1cm);
+arrow("\underline{Axe des r\'eels}",(u,-0.75*Y*u),W,1cm);
 
 real x=2.2, y=-1.25;
 addtick(Label("$1$", align=E),(u,1));

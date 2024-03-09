@@ -1,6 +1,5 @@
 import solids;
-currentlight=light(paleyellow, viewport=false,
-                   (5,-5,10),(0,0,-10));
+currentlight=light(paleyellow, specularfactor=3, (2,4,6));
 
 size(6cm,0);
 draw(sphere(1,n=4*nslice), linewidth(bp), m=10);
