@@ -1,4 +1,4 @@
-size(4cm);
+size(6cm);
 
 draw(unitcircle, dot);
 dotfactor*=3;

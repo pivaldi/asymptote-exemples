@@ -1,4 +1,4 @@
-size(4cm,0);
+size(6cm,0);
 import roundedpath;
 
 draw(roundedpath(unitsquare,.4));

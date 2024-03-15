@@ -1,6 +1,6 @@
 size(0,0);
 
-path cle=scale(2cm)*reverse(unitcircle);
+path cle=scale(4cm)*reverse(unitcircle);
 
 draw(cle);
 

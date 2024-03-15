@@ -1,5 +1,5 @@
 size(0,0);
 pair O=0;
 
-draw(circle(O,2cm));
-dot(circle(O,2cm),red+4bp);
+draw(circle(O,4cm));
+dot(circle(O,4cm), red+4bp);

@@ -1,4 +1,4 @@
-size(6cm,0);
+size(8cm,0);
 
 path a,b,c,d;
 a = (-1,-.2){up} .. tension 1.2 .. (1,-.2){down};

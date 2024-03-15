@@ -1,5 +1,5 @@
 // Author: John Bowman
-size(0,100);
+size(0, 100);
 real margin=2mm;
 pair z1=(0,1);
 pair z0=(0,0);

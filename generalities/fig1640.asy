@@ -1,4 +1,4 @@
-size(6cm,0);
+size(8cm,0);
 
 path apath=(0,0)..(1,1)..(2,.5){dir(0)};
 

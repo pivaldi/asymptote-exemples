@@ -1,4 +1,4 @@
-size(3cm,0);
+size(8cm,0);
 
 pen[][] p={{rgb(white),rgb(grey),rgb(black)},
     {red,green,blue},

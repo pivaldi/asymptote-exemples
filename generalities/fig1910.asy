@@ -1,4 +1,4 @@
-size(6cm,0);
+size(8cm,0);
 
 path a,b,c;
 a = shift(1,0)*scale(2)*unitcircle;

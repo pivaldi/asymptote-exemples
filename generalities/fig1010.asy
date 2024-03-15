@@ -1,4 +1,4 @@
-size(6cm,0);
+size(8cm,0);
 
 picture pic;
 pen [] P={.8red,.7green,blue+.5grey,yellow+.6grey};

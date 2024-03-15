@@ -1,4 +1,4 @@
-size(4cm,0);
+size(6cm,0);
 
 real n=7, a=360/n;
 for (int i = 0; i < n; ++i)

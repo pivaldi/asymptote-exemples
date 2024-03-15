@@ -1,1 +1,1 @@
-label(scale(10)*Label("$\pi$"),(0,0));
+label(scale(15)*Label("$\pi$"), (0,0));

@@ -1,7 +1,7 @@
 size(0,0);
 
 defaultpen(linewidth(1bp));
-real u=3cm;
+real u=4cm;
 pair A, B, C, D, E;
 path p, q, r;
 

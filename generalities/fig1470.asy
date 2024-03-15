@@ -1,6 +1,6 @@
 size(0,0);
 
-path p= scale(1cm)*unitcircle;
+path p= scale(3cm)*unitcircle;
 
 draw(p,red+1mm);
 draw(shift(1mm,2mm)*p);

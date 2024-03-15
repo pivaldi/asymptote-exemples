@@ -1,4 +1,5 @@
-size(2cm,2cm);
+size(6cm,6cm);
+
 draw(unitsquare);
 dot((0,0)--(1,1)--(0,1)--(1,0));
 draw((0,0)--(1,1));

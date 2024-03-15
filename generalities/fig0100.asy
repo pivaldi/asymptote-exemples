@@ -1,4 +1,5 @@
-unitsize(x=1cm, y=0.5cm);
+unitsize(x=2cm, y=1cm);
+
 pair A, B, C, D;
 A=(0,0);
 B=(2,0);

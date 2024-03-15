@@ -1,6 +1,6 @@
 size(0,0);
 
-real R=2cm;
+real R=4cm;
 
 draw(scale(R)*unitcircle);
 dot((0,0),linewidth(4bp));

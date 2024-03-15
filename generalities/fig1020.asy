@@ -1,4 +1,4 @@
-size(4cm,0);
+size(6cm,0);
 
 real a=360/6;
 for (int i = -1; i < 5; ++i)

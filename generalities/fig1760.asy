@@ -1,5 +1,5 @@
 import graph;
-size(6cm,0);
+size(8cm,0);
 
 path a = polargraph(new real(real t){return t;}, 0, 3pi, operator ..);
 path b = polargraph(new real(real t){return 2t;}, 0, 3.75pi, operator ..);

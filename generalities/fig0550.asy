@@ -1,4 +1,4 @@
-size(3cm,0);
+size(8cm,0);
 import palette;
 
 real[][] v={{1,2},{3,4}};

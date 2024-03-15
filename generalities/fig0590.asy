@@ -1,4 +1,5 @@
-size(12cm,0);
+size(16cm,0);
+
 path[] P=texpath("$\displaystyle\int_{-\infty}^{+\infty}e^{-\alpha x^2}\,dx=
 \sqrt{\frac{\pi}{\alpha}}$");
 pair m=min(P), M=max(P);

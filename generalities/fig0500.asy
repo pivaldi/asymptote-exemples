@@ -1,1 +1,1 @@
-filldraw((0,0)--(0,2cm)--(2cm,0)--cycle,gray);
+filldraw((0,0)--(0,6cm)--(6cm,0)--cycle,gray);

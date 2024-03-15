@@ -1,5 +1,5 @@
 size(0,0);
-path line=(0,0)--(3cm,0);
+path line=(0,0)--(6cm,0);
 transform T=shift(0,-cm);
 
 draw(Label("A",align=Center,filltype=UnFill), line);

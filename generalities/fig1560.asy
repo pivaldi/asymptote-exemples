@@ -1,7 +1,7 @@
 size(0,0);
 
 pair [] P, Q, R, S;
-real u=1cm;
+real u=2cm;
 
 for (int i=0; i<=4; ++i)
   P[i] = rotate(i*360/5)*(0,-u);

@@ -1,4 +1,4 @@
-size(0,4cm);
+size(0,6cm);
 
 texpreamble("\usepackage{amsmath}
              \DeclareMathOperator{\e}{e}");

@@ -13,7 +13,7 @@ guide inversion(pair O, real k, path M)
   return opath .. cycle;
 }
 
-real u=8cm;
+real u=10cm;
 path [] p;
 path A = scale(u)*unitcircle;
 path B = scale(3)*A;

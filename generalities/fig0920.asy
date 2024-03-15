@@ -1,5 +1,4 @@
-size(4cm,0);
-
+size(6cm,0);
 
 draw(E--N--W--S--cycle,.5red+1mm);
 

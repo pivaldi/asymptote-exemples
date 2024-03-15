@@ -1,3 +1,5 @@
+unitsize(2cm);
+
 pair A, B, C, D;
 A=(0,0);
 B=(2,0);

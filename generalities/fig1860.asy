@@ -1,7 +1,8 @@
 // Venn diagram // Diagramme de Venn
 // Edwards' construction // Construction d'Edwards
 import roundedpath;
-size(10cm,0);
+size(14cm,0);
+
 path [] EdVenn(int n)
 {
   path [] opath;
@@ -25,7 +26,7 @@ path [] EdVenn(int n)
           tpath=tpath..rotate(a)*ocle;
           a+=step;
         }
-      opath.push(tpath..cycle);      
+      opath.push(tpath..cycle);
     }
     return opath;
 }

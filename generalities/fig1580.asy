@@ -1,6 +1,6 @@
 size(0,0);
 
-label(graphic("dali.eps","width=5cm"));
+label(graphic("dali.eps","width=10cm"));
 layer();
 
 draw(scale(2cm)*unitcircle,linewidth(.75mm));

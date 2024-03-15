@@ -1,4 +1,4 @@
-size(8cm,0);
+size(10cm,0);
 
 pair[] self_intersection(path p, int n=100)
 {
@@ -37,4 +37,3 @@ path p = randompath(15);
 pair[] inter=self_intersection(p);
 dott(inter, .8red);
 draw(p);
-
