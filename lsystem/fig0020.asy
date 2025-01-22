@@ -1,5 +1,5 @@
 import Lsystem;
-size(10cm,0);
+size(15cm,0);
 
 Lsystem SierpinskiCurve=
   Lsystem("YF",
@@ -9,4 +9,3 @@ SierpinskiCurve.iterate(7);
 draw(SierpinskiCurve.paths(), bp+0.2*green);
 
 shipout(bbox(Fill(paleyellow)));
-

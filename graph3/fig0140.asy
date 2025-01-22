@@ -1,7 +1,7 @@
 settings.render=0;
 import graph3;
 import palette;
-size(10cm,0);
+size(15cm,0);
 currentprojection=orthographic(2,-2,2.5);
 
 real f(pair z) {

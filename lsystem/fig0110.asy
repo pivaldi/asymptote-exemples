@@ -1,5 +1,5 @@
 import Lsystem;
-size(8cm,0);
+size(15cm,0);
 
 string[][] rules={{"F","FF"},
                   {"H","+F+FH++FFH++F+FF+FH++FFH++F+F-"}};

@@ -1,5 +1,5 @@
 import Lsystem;
-size(8cm,0);
+size(12cm,0);
 
 string[][] rules={
   {"A", "X+X+X+X+X+X+"},

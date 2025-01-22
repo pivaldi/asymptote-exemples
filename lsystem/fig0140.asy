@@ -1,6 +1,6 @@
 // Peano Gosper curve
 import Lsystem;
-size(8cm,0);
+size(12cm,0);
 
 Lsystem PeanoGosperCurve=
   Lsystem("FX",

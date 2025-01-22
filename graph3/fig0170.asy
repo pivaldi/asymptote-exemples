@@ -1,6 +1,6 @@
 settings.render=0;
 import graph3;
-size(10cm);
+size(15cm);
 
 currentprojection=orthographic(4,2,4);
 

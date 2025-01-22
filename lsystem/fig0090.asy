@@ -1,5 +1,5 @@
 import Lsystem;
-size(8cm,0);
+size(10cm,0);
 
 Lsystem Fass=Lsystem("-L",
                      new string[][]{{"L","LFLF+RFR+FLFL-FRF-LFL-FR+F+RF-LFL-FRFRFR+"},

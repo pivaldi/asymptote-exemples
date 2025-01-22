@@ -1,5 +1,5 @@
 import Lsystem;
-size(8cm,0);
+size(12cm,0);
 
 string[][] rules={{"X","XF-F+F-XF+F+XF-F+F-X"}};
 Lsystem squareCurve= Lsystem("F+XF+F+XF", rules, La=90, Lai=45);

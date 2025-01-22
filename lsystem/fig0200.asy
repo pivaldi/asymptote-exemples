@@ -1,5 +1,5 @@
 import Lsystem;
-size(8cm,0);
+size(12cm,0);
 
 string[][] rules={
   {"6","8F++9F----7F[-8F----6F]++"},

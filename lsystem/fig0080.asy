@@ -1,5 +1,5 @@
 import Lsystem;
-size(8cm,0);
+size(10cm,0);
 
 Lsystem HilbertCurve=Lsystem("X",
                              new string[][]{{"X","-YF+XFX+FY-"},{"Y","+XF-YFY-FX+"}},

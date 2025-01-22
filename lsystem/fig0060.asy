@@ -1,6 +1,6 @@
 import Lsystem;
 
-size(8cm,0);
+size(10cm,0);
 Lsystem Koch=Lsystem("-F--F--F",
                      new string[][]{{"F","F-F++F-F"}},
                      La=60);
