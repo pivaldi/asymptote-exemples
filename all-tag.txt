@@ -1,129 +1,128 @@
-
-4-draw (2D)
-5-size
-6-pair
-61-Loop/for/while
-62-Transform
-62-Transform/scale/shift/rotate
-62-Transform/scale/shift/rotate/projection
-63-Rotate
-64-Circle
-65-arc
-66-Number format
-67-fixedscaling
-68-path
-69-frame
-70-length
-71-Point/Dot
-72-Position
-73-interp
-74-Line type
-75-Arrows/Bars
-76-Fill/Unfill
-77-texpath
-78-shipout
-79-bbox
-80-Shading
-81-clip
-82-opacity
-83-labelmargin
-84-Label
-85-font
-85-fontsize
-86-picture
-87-layer
-88-Direction
-89-align
-91-basealign
-92-defaultpen
-92-pen
-93-margin
-94-deferred drawing
-95-object
-96-Fraction
-97-Full line
-97-line
-98-Basis
-99-Function (creating)
-99-Function creation
-100-graphic
-101-tex/latex features
-102-Intersection
-103-Geometry
-104-Markers
-105-Venn diagram
-106-Random
-107-buildcycle
-108-atexit
-109-pattern
-110-unitsize
-111-True size
-112-array
-113-Graph
-114-Fractals
-118-conic
-119-coords system
-120-vector
-121-point
-122-parallel
-123-perpendicular
-124-segment
-125-ellipse
-126-parabola
-127-hyperbola
-128-abscissa
-129-distance
-130-mass
-131-triangle
-132-inversion
-134-tangent
-135-Axis
-136-Grid
-138-function (drawing)
-138-Function (graphing)
-139-function (implicit)
-139-Function (implicit)
-140-interpolate
-141-slopefield
-142-contour
-143-legend
-144-typedef
-145-struct
-151-Graph (3D)
-152-surface
-153-draw (3D)
-154-Axis (3D)
-155-Grid (3D)
-156-label (3D)
-157-Arrow (3D)
-158-light (3D)
-159-Level set (3D)
-160-palette
-161-Shading (3D)
-162-Transform (3D)
-163-Projection (3D)
-164-triple
-165-Sphere
-166-Spherical harmonics
-168-patch
-170-Wire frame
-171-Geometry (3D)
-172-bsp
-174-path3
-175-plan
-175-plane
-176-Direction (3D)
-177-arc (3D)
-179-Solid
-180-Revolution
-181-Polyhedron
-183-tube
-186-Tiling
-188-Recursion
-191-L-System
-210-Numerical Methods
-216-Physics
-228-Animation
-229-Locus
-230-Morphing
-232-PrimarySchool
+|4|draw (2D)|
+|5|size|
+|6|pair|
+|61|Loop/for/while|
+|62|Transform|
+|62|Transform/scale/shift/rotate|
+|62|Transform/scale/shift/rotate/projection|
+|63|Rotate|
+|64|Circle|
+|65|arc|
+|66|Number format|
+|67|fixedscaling|
+|68|path|
+|69|frame|
+|70|length|
+|71|Point/Dot|
+|72|Position|
+|73|interp|
+|74|Line type|
+|75|Arrows/Bars|
+|76|Fill/Unfill|
+|77|texpath|
+|78|shipout|
+|79|bbox|
+|80|Shading|
+|81|clip|
+|82|opacity|
+|83|labelmargin|
+|84|Label|
+|85|font|
+|85|fontsize|
+|86|picture|
+|87|layer|
+|88|Direction|
+|89|align|
+|91|basealign|
+|92|defaultpen|
+|92|pen|
+|93|margin|
+|94|deferred drawing|
+|95|object|
+|96|Fraction|
+|97|Full line|
+|97|line|
+|98|Basis|
+|99|Function (creating)|
+|99|Function creation|
+|100|graphic|
+|101|tex/latex features|
+|102|Intersection|
+|103|Geometry|
+|104|Markers|
+|105|Venn diagram|
+|106|Random|
+|107|buildcycle|
+|108|atexit|
+|109|pattern|
+|110|unitsize|
+|111|True size|
+|112|array|
+|113|Graph|
+|114|Fractals|
+|118|conic|
+|119|coords system|
+|120|vector|
+|121|point|
+|122|parallel|
+|123|perpendicular|
+|124|segment|
+|125|ellipse|
+|126|parabola|
+|127|hyperbola|
+|128|abscissa|
+|129|distance|
+|130|mass|
+|131|triangle|
+|132|inversion|
+|134|tangent|
+|135|Axis|
+|136|Grid|
+|138|function (drawing)|
+|138|Function (graphing)|
+|139|function (implicit)|
+|139|Function (implicit)|
+|140|interpolate|
+|141|slopefield|
+|142|contour|
+|143|legend|
+|144|typedef|
+|145|struct|
+|151|Graph (3D)|
+|152|surface|
+|153|draw (3D)|
+|154|Axis (3D)|
+|155|Grid (3D)|
+|156|label (3D)|
+|157|Arrow (3D)|
+|158|light (3D)|
+|159|Level set (3D)|
+|160|palette|
+|161|Shading (3D)|
+|162|Transform (3D)|
+|163|Projection (3D)|
+|164|triple|
+|165|Sphere|
+|166|Spherical harmonics|
+|168|patch|
+|170|Wire frame|
+|171|Geometry (3D)|
+|172|bsp|
+|174|path3|
+|175|plan|
+|175|plane|
+|176|Direction (3D)|
+|177|arc (3D)|
+|179|Solid|
+|180|Revolution|
+|181|Polyhedron|
+|183|tube|
+|186|Tiling|
+|188|Recursion|
+|191|L|System|
+|210|Numerical Methods|
+|216|Physics|
+|228|Animation|
+|229|Locus|
+|230|Morphing|
+|232|PrimarySchool|
