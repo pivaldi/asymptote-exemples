@@ -1,5 +1,5 @@
 // Barnsley's fern
-// Fougère de Barnsley
+// FougÃ¨re de Barnsley
 size(5cm,0);
 
 real ab=85, ac=-5;

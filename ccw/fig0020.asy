@@ -2,7 +2,7 @@ size(6cm);
 bool counterclockwise(path g, int n=10^3)
 {
   // Return "true" if "g" (SIMPLE CURVE i.e. NON CROSSED) is counterclockwise
-  // Retounre "true" si "g" (NON CROISÉ) est dans le sens contraire des aiguilles d'une montre
+  // Retounre "true" si "g" (NON CROISÃ‰) est dans le sens contraire des aiguilles d'une montre
   if (!cyclic(g) || length(g)==0) abort("The function 'clocksize' needs cyclic path.");
   pair [] pt;
   real l=length(g),
@@ -19,7 +19,7 @@ bool counterclockwise(path g, int n=10^3)
 path counterclockdirected(path g,int n=10^3)
 {
   // Return "g" (SIMPLE CURVE i.e. NON CROSSED) counterclockwise
-  // Retourne "g" (NON CROISÉ) dans le sens des aiguilles d'une montre
+  // Retourne "g" (NON CROISÃ‰) dans le sens des aiguilles d'une montre
   if (counterclockwise(g,n)) return g; else return reverse(g);
 }
 

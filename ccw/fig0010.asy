@@ -3,7 +3,7 @@ size(8cm, false);
 real signedArea(pair [] pt)
 {
   // Return the signed area of a simple (NON CROSSED) polygon of vertex "pt"
-  // Retourne l'aire algébrique d'un polygone NON CROIÉ
+  // Retourne l'aire algÃ©brique d'un polygone NON CROISÃ‰
   pair [] pt_= copy(pt);
   real n=pt.length,
     sa=0;
@@ -18,7 +18,7 @@ bool counterclockwise(pair [] pt)
 {
   // Return "true" if the polygon (SIMPLE CURVE i.e. NON CROSSED)
   // of vertex "pt" is counterclockwise
-  // Retourne "true" si le polygone (NON CROISÉ) de sommets "pt"
+  // Retourne "true" si le polygone (NON CROISÃ‰) de sommets "pt"
   // est dans le sens des aiguilles d'une montre
   return (signedArea(pt) > 0);
 }

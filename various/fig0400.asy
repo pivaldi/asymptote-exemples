@@ -1,4 +1,4 @@
-// Toutes les cartes à points dans un seul pdf: ADDPDF
+// Toutes les cartes Ã  points dans un seul pdf: ADDPDF
 import carteApoints;
 import animation;
 settings.outformat="pdf";

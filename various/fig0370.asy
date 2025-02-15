@@ -1,4 +1,4 @@
-// Carte à points 2.
+// Carte Ã  points 2.
 import carteApoints;
 settings.outformat="pdf";
 

@@ -4,8 +4,8 @@ unitsize(1cm);
 typedef real hermite(real);
 
 /**
- * Retourne la fonction polynôme de Hermite
- * passant par les points m(x_i,y_i) de nombre dérivée d_i en ce point.
+ * Retourne la fonction polynÃ´me de Hermite
+ * passant par les points m(x_i,y_i) de nombre dÃ©rivÃ©e d_i en ce point.
  * Return Hermite polynomial interpolation function
  * passing by the points m (x_i, y_i) of derived number d_i in this point.
  **/
@@ -13,7 +13,7 @@ hermite hermite(pair [] m, real [] d)
 {
   return new real(real x){
     int n=m.length;
-    if (n != d.length) abort("Hermite: nombres de paramètres incorrectes.");
+    if (n != d.length) abort("Hermite: nombres de paramÃ¨tres incorrectes.");
     real q,qk,s,y=0;
     for (int k=0; k<n ; ++k) {
       real q=1, qk=1, s=0;

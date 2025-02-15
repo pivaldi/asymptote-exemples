@@ -1,23 +1,23 @@
-// On dÈfinit ce qu'est l'objet 'rectangle'
-// On peut comparer Áa ‡ la dÈfinition d'une voiture:
-// elle a des propriËtÈs: la couleur, le nombre de portes...
-// elle a aussi des actions (ou mÈthodes en info): ouvrir la porte, tourner le volant, avancer...
+// On d√©finit ce qu'est l'objet 'rectangle'
+// On peut comparer √ßa √† la d√©finition d'une voiture:
+// elle a des propri√®t√©s: la couleur, le nombre de portes...
+// elle a aussi des actions (ou m√©thodes en info): ouvrir la porte, tourner le volant, avancer...
 struct rectangle
 {
-  pair A,B,C,D; // Ce sont des propriÈtÈs (au sens informatique): ses sommets.
+  pair A,B,C,D; // Ce sont des propri√©t√©s (au sens informatique): ses sommets.
   path path(){return A--B--C--D--cycle;} // Ceci est une action du rectangle (renvoyer le chemin du rectangle)
 };
 
 // Le constructeur de l'objet (une action qui renvoie l'objet).
-// Chaque fois que l'on va dÈfinir une variable 'X' de type 'rectangle'
-// c'est le retour de l'action rectangle.init qui est affectÈ ‡ X.
+// Chaque fois que l'on va d√©finir une variable 'X' de type 'rectangle'
+// c'est le retour de l'action rectangle.init qui est affect√© √† X.
 rectangle operator init() {return new rectangle;}
 
-// La fonction rectangle  qui prend en argument le coin infÈrieur gauche
-// et le coin supÈrieur droit retourne un rectangle.
-// On notera comment l'on rÈcupÈre une propriÈtÈ ou une action d'un
-// objet gr‚ce au '.' en Ècrivant objet.propriÈtÈ ou
-// objet.action(les_paramËtres).
+// La fonction rectangle  qui prend en argument le coin inf√©rieur gauche
+// et le coin sup√©rieur droit retourne un rectangle.
+// On notera comment l'on r√©cup√©re une propri√©t√© ou une action d'un
+// objet gr√¢ce au '.' en √©crivant objet.propri√©t√© ou
+// objet.action(les_param√®tres).
 rectangle rectangle(pair gb, pair dh)
 {
   rectangle retour;
@@ -28,9 +28,9 @@ rectangle rectangle(pair gb, pair dh)
   return retour;
 }
 
-// On peut alors dÈfinir tous les opÈrateurs que l'on veut sur les
+// On peut alors d√©finir tous les op√©rateurs que l'on veut sur les
 // rectangles.
-// par exemple la multiplication d'un rÈal par un rectangle (x*rectangle):
+// par exemple la multiplication d'un r√©al par un rectangle (x*rectangle):
 rectangle operator *(real x, rectangle rectangle)
 {
   rectangle retour;
@@ -41,7 +41,7 @@ rectangle operator *(real x, rectangle rectangle)
   return retour;
 }
 
-// Ici, cette opÈration est commutative (rectangle*x=x*rectangle):
+// Ici, cette op√©ration est commutative (rectangle*x=x*rectangle):
 rectangle operator *(rectangle rectangle,real x){return x*rectangle;}
 
 // On dit ici comment "Asymptote" doit convertir, si besoin est, un type 'rectangle'
