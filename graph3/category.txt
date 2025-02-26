@@ -1,3 +1,2 @@
-Asymptote
 Examples 3D
 graph3.asy

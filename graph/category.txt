@@ -1,3 +1,2 @@
-Asymptote
 Examples 2D
 graph.asy

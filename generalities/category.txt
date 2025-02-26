@@ -1,3 +1,2 @@
-1-Asymptote
-2-Examples 2D
-3-Generalities
+Examples 2D
+Generalities

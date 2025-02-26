@@ -1,3 +1,2 @@
-Asymptote
 Surveys
 Random Walk (3D)
