@@ -14,7 +14,7 @@ fct3 F(real t)
   return new real(real x, real y, real z){return x^2+y^2-t*z^2+t-1;};
 }
 
-int n=15;
+int n=10;
 picture pic;
 real tmin=0.1, tmax=2;
 real step=(tmax-tmin)/n;

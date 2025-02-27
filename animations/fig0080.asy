@@ -1,18 +1,16 @@
+size(16cm);
 import graph3;
 import animation;
 import solids;
 
 settings.render=0;
 animation A;
-A.global=false;
 
 int nbpts=500;
 real q=2/5;
 real pas=5*2*pi/nbpts;
 int angle=3;
 real R=3;
-
-unitsize(1cm);
 
 real x(real t){return R*cos(q*t)*cos(t);}
 real y(real t){return R*cos(q*t)*sin(t);}
@@ -52,4 +50,4 @@ for (int phi=0; phi<360; phi+=angle) {
   restore();
 }
 
-A.movie(options="-density 350 -resample 96 -quality 100 -depth 8 -strip");
+A.movie();

@@ -30,6 +30,4 @@ for (real a=0.001; a < 360; a += 5) {
   restore();
 }
 
-// Anim.movie();
-Anim.pdf(keep=true);
-
+Anim.movie();

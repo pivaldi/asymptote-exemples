@@ -1,4 +1,4 @@
-size(0,10cm);
+size(16cm);
 import graph3;
 import animation;
 import solids;
@@ -76,4 +76,4 @@ for (int phi=0; phi<360; phi+=angle) {
   restore();
 }
 
-A.movie(options="-density 350 -resample 96 -quality 100 -depth 8 -strip");
+A.movie();
