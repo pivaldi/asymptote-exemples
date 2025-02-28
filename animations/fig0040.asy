@@ -1,22 +1,18 @@
 import geometry;
 import animate;
-settings.tex="pdflatex";
-settings.outformat="pdf";
-
 animation Anim;
 
-size(10cm,0);
+size(12cm);
 
-circle C=circle(origin,1);
+circle C=circle(origin, 1);
 draw(C);
-point A=point(C,0), B, M;
+point A=point(C, 0), B, M;
 guide locus;
-
 
 for (real a=0.001; a < 360; a += 5) {
   save();
   B=angpoint(C,a);
-  triangle t=triangle(origin,A,B);
+  triangle t=triangle(origin, A, B);
   draw(t);
   draw(incircle(t), bp+0.8*blue);
   triangle intouch=intouch(t);

@@ -1,5 +1,4 @@
 import three;
-// import solids;
 
 real picSize = 15cm;
 
