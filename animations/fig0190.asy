@@ -3,6 +3,7 @@ import hull_pi;
 import animation;
 animation A;
 settings.outformat="pdf";
+A.global = false;
 
 pair[] cloud;
 int nbpt=200;

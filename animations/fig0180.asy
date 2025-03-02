@@ -3,6 +3,7 @@ import animate;
 animation A;
 
 size(16cm, 0);
+
 usepackage("mathrsfs, amsfonts, amsmath, amssymb");
 picture pic, pic1, pic2, pic3;
 real u = 1, Y = 2 * pi+0.5;

@@ -1,8 +1,6 @@
 import graph_settings;
 import animate;
-size(10cm);
-settings.tex="pdflatex";
-settings.outformat="pdf";
+size(16cm);
 
 pair[] interp(pair[] a1, pair[] a2, real k)
 {
@@ -10,8 +8,8 @@ pair[] interp(pair[] a1, pair[] a2, real k)
   pair[] g;
   int l=a1.length;
   g=sequence(new pair(int j){
-      return interp(a1[j],a2[j],k);
-    },l);
+      return interp(a1[j], a2[j], k);
+    }, l);
   return g;
 }
 
@@ -31,9 +29,9 @@ pair[] nodes(path g, int n)
 animation A;
 
 int nbpt=4;
-pair[] A1=nodes(unitsquare,nbpt);
-path g=(0,0)--(1,0)--(0,1)--(1,1)--cycle;
-pair[] A2=shift(2,1)*rotate(25)*nodes(g,nbpt);
+pair[] A1=nodes(unitsquare, nbpt);
+path g=(0, 0)--(1, 0)--(0, 1)--(1, 1)--cycle;
+pair[] A2=shift(2, 1)*rotate(25)*nodes(g, nbpt);
 interpolate join=operator ..;
 // interpolate join=operator --;
 
@@ -42,14 +40,14 @@ int n=40;
 real step=1/n;
 pen p1=0.8*red, p2=0.8*blue;
 
-filldraw(join(morphing(A1,A2,0,join),cycle), p1);
-filldraw(join(morphing(A1,A2,1,join),cycle), p2);
+filldraw(join(morphing(A1, A2, 0, join), cycle), p1);
+filldraw(join(morphing(A1, A2, 1, join), cycle), p2);
 
 for (int i=0; i <= n; ++i) {
   save();
-  filldraw(join(morphing(A1,A2,i*step,join),cycle),opacity(0.5)+interp(p1,p2,i*step));
+  filldraw(join(morphing(A1, A2, i*step, join), cycle), opacity(0.5)+interp(p1, p2, i*step));
   A.add();
   restore();
 }
 
-A.movie();
+A.movie(BBox(3mm, Fill(white)));

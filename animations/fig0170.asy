@@ -1,7 +1,6 @@
 import graph;
 import animate;
 size(15cm);
-settings.outformat="pdf";
 
 pair[] interp(pair[] a1, pair[] a2, real k)
 {
@@ -50,6 +49,11 @@ for (int i=0; i <= n; ++i) {
            evenodd+interp(p1,p2,i*step));
   A.add();
   restore();
+}
+
+int l = A.pictures.length;
+for (int i=1; i <= l; ++i) {
+  A.add(A.pictures[l-i]);
 }
 
 A.movie(BBox(3mm, 3bp+miterjoin+black, FillDraw(lightyellow)));

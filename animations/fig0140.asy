@@ -1,19 +1,16 @@
 import Lsystem;
 import animate;
-animation A;
-settings.render=0;
-settings.tex="pdflatex";
-settings.outformat="pdf";
+animation A = animation(global=false);
 
-size(10cm,0);
+size(16cm, 12cm);
 
-string[][] rules={{"A","[+BFA][-BFA][^BFA][&BFA]"}, {"B", "'(0.7071)"}};
+string[][] rules={{"A", "[+BFA][-BFA][^BFA][&BFA]"}, {"B", "'(0.7071)"}};
 Lsystem3 plant=Lsystem3("A", rules, La=45);
 plant.iterate(5);
 tree3 g=plant.tree3();
 
 for (int angle=0; angle < 360; angle += 5) {
-  currentprojection=orthographic(rotate(angle,Z)*(10,10,6));
+  currentprojection=orthographic(rotate(angle, Z)*(10, 10, 6));
   save();
   for (int i : g.keys)
     draw((path3)g[i], linewidth(bp)+(g[i].depth > 3 ? brown : 0.8*green));
@@ -21,4 +18,4 @@ for (int angle=0; angle < 360; angle += 5) {
   restore();
 }
 
-A.movie();
+A.movie(BBox(3mm, Fill(yellow+blue)));
