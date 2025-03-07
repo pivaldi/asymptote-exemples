@@ -10,11 +10,11 @@ CAT_FILE="$SRC_DIR/categories.txt"
 
 find "$SRC_DIR" -type f -name 'category.txt' -print0 |
     while IFS= read -r -d '' FILE; do
-        sed 's/^|//;s/|$//;s/|/-/' "$FILE" >>"$TMP_FILE"
+        sed 's/^|//;s/|$//;s/|/~/' "$FILE" >>"$TMP_FILE"
         echo >>"$TMP_FILE"
     done
 
 sort -n <"$TMP_FILE" | uniq >"$CAT_FILE"
-sed -i '/^$/d;s/^/|/g;s/$/|/g;s/-/|/g' "$CAT_FILE"
+sed -i '/^$/d;s/^/|/g;s/$/|/g;s/~/|/g' "$CAT_FILE"
 
 rm "$TMP_FILE"

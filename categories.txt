@@ -7,7 +7,7 @@
 |7|graph3.asy|
 |8|graph.asy|
 |9|grid3.asy|
-|10|L|System|
+|10|L-System|
 |11|Miscellaneous|
 |12|Opacity|
 |13|Path Orientation|
