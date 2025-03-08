@@ -1,128 +1,128 @@
-|4|draw (2D)|
-|5|size|
-|6|pair|
-|61|Loop/for/while|
-|62|Transform|
-|62|Transform/scale/shift/rotate|
-|62|Transform/scale/shift/rotate/projection|
-|63|Rotate|
-|64|Circle|
+|128|abscissa|
+|89|align|
+|228|Animation|
+|177|arc (3D)|
 |65|arc|
-|66|Number format|
-|67|fixedscaling|
-|68|path|
-|69|frame|
-|70|length|
-|71|Point/Dot|
-|72|Position|
-|73|interp|
-|74|Line type|
+|112|array|
+|157|Arrow (3D)|
 |75|Arrows/Bars|
-|76|Fill/Unfill|
-|77|texpath|
-|78|shipout|
+|108|atexit|
+|135|Axis|
+|154|Axis (3D)|
+|91|basealign|
+|98|Basis|
 |79|bbox|
-|80|Shading|
+|172|bsp|
+|107|buildcycle|
+|64|Circle|
 |81|clip|
-|82|opacity|
-|83|labelmargin|
-|84|Label|
+|118|conic|
+|142|contour|
+|119|coords system|
+|92|defaultpen|
+|94|deferred drawing|
+|176|Direction (3D)|
+|88|Direction|
+|129|distance|
+|4|draw (2D)|
+|153|draw (3D)|
+|125|ellipse|
+|76|Fill/Unfill|
+|67|fixedscaling|
 |85|font|
 |85|fontsize|
-|86|picture|
-|87|layer|
-|88|Direction|
-|89|align|
-|91|basealign|
-|92|defaultpen|
-|92|pen|
-|93|margin|
-|94|deferred drawing|
-|95|object|
+|114|Fractals|
 |96|Fraction|
+|69|frame|
 |97|Full line|
-|97|line|
-|98|Basis|
 |99|Function (creating)|
 |99|Function creation|
-|100|graphic|
-|101|tex/latex features|
-|102|Intersection|
-|103|Geometry|
-|104|Markers|
-|105|Venn diagram|
-|106|Random|
-|107|buildcycle|
-|108|atexit|
-|109|pattern|
-|110|unitsize|
-|111|True size|
-|112|array|
-|113|Graph|
-|114|Fractals|
-|118|conic|
-|119|coords system|
-|120|vector|
-|121|point|
-|122|parallel|
-|123|perpendicular|
-|124|segment|
-|125|ellipse|
-|126|parabola|
-|127|hyperbola|
-|128|abscissa|
-|129|distance|
-|130|mass|
-|131|triangle|
-|132|inversion|
-|134|tangent|
-|135|Axis|
-|136|Grid|
 |138|function (drawing)|
 |138|Function (graphing)|
 |139|function (implicit)|
 |139|Function (implicit)|
-|140|interpolate|
-|141|slopefield|
-|142|contour|
-|143|legend|
-|144|typedef|
-|145|struct|
-|151|Graph (3D)|
-|152|surface|
-|153|draw (3D)|
-|154|Axis (3D)|
-|155|Grid (3D)|
-|156|label (3D)|
-|157|Arrow (3D)|
-|158|light (3D)|
-|159|Level set (3D)|
-|160|palette|
-|161|Shading (3D)|
-|162|Transform (3D)|
-|163|Projection (3D)|
-|164|triple|
-|165|Sphere|
-|166|Spherical harmonics|
-|168|patch|
-|170|Wire frame|
+|103|Geometry|
 |171|Geometry (3D)|
-|172|bsp|
+|113|Graph|
+|151|Graph (3D)|
+|100|graphic|
+|136|Grid|
+|155|Grid (3D)|
+|127|hyperbola|
+|73|interp|
+|140|interpolate|
+|102|Intersection|
+|132|inversion|
+|156|label (3D)|
+|84|Label|
+|83|labelmargin|
+|87|layer|
+|143|legend|
+|70|length|
+|159|Level set (3D)|
+|158|light (3D)|
+|97|line|
+|74|Line type|
+|229|Locus|
+|61|Loop/for/while|
+|191|L-System|
+|93|margin|
+|104|Markers|
+|130|mass|
+|230|Morphing|
+|66|Number format|
+|210|Numerical Methods|
+|95|object|
+|82|opacity|
+|6|pair|
+|160|palette|
+|126|parabola|
+|122|parallel|
+|168|patch|
 |174|path3|
+|68|path|
+|109|pattern|
+|92|pen|
+|123|perpendicular|
+|216|Physics|
+|86|picture|
 |175|plan|
 |175|plane|
-|176|Direction (3D)|
-|177|arc (3D)|
-|179|Solid|
-|180|Revolution|
+|121|point|
+|71|Point/Dot|
 |181|Polyhedron|
-|183|tube|
-|186|Tiling|
-|188|Recursion|
-|191|L|System|
-|210|Numerical Methods|
-|216|Physics|
-|228|Animation|
-|229|Locus|
-|230|Morphing|
+|72|Position|
 |232|PrimarySchool|
+|163|Projection (3D)|
+|106|Random|
+|188|Recursion|
+|180|Revolution|
+|63|Rotate|
+|124|segment|
+|161|Shading (3D)|
+|80|Shading|
+|78|shipout|
+|5|size|
+|141|slopefield|
+|179|Solid|
+|165|Sphere|
+|166|Spherical harmonics|
+|145|struct|
+|152|surface|
+|134|tangent|
+|101|tex/latex features|
+|77|texpath|
+|186|Tiling|
+|162|Transform (3D)|
+|62|Transform|
+|62|Transform/scale/shift/rotate|
+|62|Transform/scale/shift/rotate/projection|
+|131|triangle|
+|164|triple|
+|111|True size|
+|183|tube|
+|144|typedef|
+|110|unitsize|
+|120|vector|
+|105|Venn diagram|
+|170|Wire frame|

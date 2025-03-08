@@ -10,11 +10,11 @@ TAG_FILE="$SRC_DIR/tags.txt"
 
 find "$SRC_DIR" -type f -name '*.tag' -print0 |
     while IFS= read -r -d '' FILE; do
-        sed 's/^|//;s/|$//;s/|/~/' "$FILE" >>"$TMP_FILE"
+        sed -E 's/^\|([0-9]+)\|([^|]*)\|$/\2\|\1/g' "$FILE" >>"$TMP_FILE"
         echo >>"$TMP_FILE"
     done
 
 sort -n <"$TMP_FILE" | uniq >"$TAG_FILE"
-sed -i '/^$/d;s/^/|/g;s/$/|/g;s/~/|/g' "$TAG_FILE"
+sed -Ei '/^$/d;s/([^|]+)\|([0-9]+)$/\|\2\|\1\|/g' "$TAG_FILE"
 
 rm "$TMP_FILE"
