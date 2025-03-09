@@ -1,1 +1,2 @@
 ASYOPTION="-noprc"
+OUT_FORMAT=pdf

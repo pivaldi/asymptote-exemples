@@ -1,5 +1,5 @@
 import Lsystem;
-size(10cm,10cm);
+size(10cm, 10cm);
 settings.outformat="pdf"; // for opacity
 
 string[][] rules=new string[][]{{"F", "FF-[-F+F+F]+[+F-F-F]"}};
