@@ -1,1 +1,1 @@
-Solid3
+Solid3 with the Asymptote drawing software

@@ -1,1 +1,1 @@
-CCW
+Orientation of curve with the Asymptote drawing software
