@@ -1,4 +1,4 @@
-size(4cm,0);
+size(10cm,0);
 
 pair O=0;
 dot("N",O,10N);

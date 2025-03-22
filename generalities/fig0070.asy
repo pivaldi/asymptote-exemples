@@ -1,4 +1,4 @@
-size(1cm, 3cm, false);
+size(3cm, 10cm, false);
 pair A, B, C, D;
 A=(0,0);
 B=(2,0);
