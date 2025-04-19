@@ -12,8 +12,9 @@ provides an "Howto" by example from basic to advanced feature.
 
 ## Visualizing the examples
 
-[The command line Asymptote Examples Builder](https://github.com/pivaldi/asymptote-exemples-builder)
-allows to build a set of `HTML` pages to visualize pictures and codes side by side.  
+You can [browse all the Asymptote exemples on piprime.fr](https://blog.piprime.fr/asymptote/) or use
+[the command line Asymptote Examples Builder](https://github.com/pivaldi/asymptote-exemples-builder)
+to build your own `HTML` pages allowing to visualize pictures and codes side by side.
 
 # If you appreciate this project
 
